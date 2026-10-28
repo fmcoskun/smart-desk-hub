@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple vector icon: grey neumorphic tile with a green 1x2 grid (like bi-grid-1x2-fill) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#E8E8E8"
+        android:pathData="M12,2h24a10,10 0,0 1,10 10v24a10,10 0,0 1,-10 10h-24a10,10 0,0 1,-10 -10v-24a10,10 0,0 1,10 -10z" />
+    <path
+        android:fillColor="#00B33C"
+        android:pathData="M13,13h9v22h-9z M26,13h9v9h-9z M26,26h9v9h-9z" />
+</vector>

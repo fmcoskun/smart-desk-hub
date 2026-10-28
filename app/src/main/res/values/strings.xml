@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">Smart Desk Hub</string>
+    <!-- Uppercase labels are written uppercase here instead of calling uppercase() in code:
+         on a Turkish-locale phone uppercase() turns "i" into "İ" -->
+    <string name="app_title_upper">SMART DESK HUB</string>
+    <string name="mqtt_badge">MQTT</string>
+
+    <!-- Scenes -->
+    <string name="scene_work">Work</string>
+    <string name="scene_meet">Meet</string>
+    <string name="scene_leave">Leave</string>
+
+    <!-- Bluetooth card status -->
+    <string name="bt_connected">Audio Engine Connected</string>
+    <string name="bt_headphones_connected">Headphones Connected</string>
+    <string name="bt_disconnected">Disconnected / Standby</string>
+
+    <!-- Smart Plug auto-off countdown -->
+    <plurals name="plug_off_in">
+        <item quantity="one">Off in %d min</item>
+        <item quantity="other">Off in %d min</item>
+    </plurals>
+
+    <!-- MQTT console & footer -->
+    <string name="console_title_upper">MQTT BRIDGE CONSOLE</string>
+    <string name="console_tag">PUB</string>
+    <string name="console_idle_topic">office/desk/status</string>
+    <!-- \" keeps the quotes: Android strips unescaped double quotes from string resources -->
+    <string name="console_idle_json">{\"state\":\"READY\"}</string>
+    <string name="footer_temperature">Room temperature</string>
+    <string name="footer_humidity">Room humidity</string>
+    <string name="footer_power">Desk power draw</string>
+    <!-- Detail screens (copy from the reference index.html templates) -->
+    <string name="detail_back">Back</string>
+    <string name="section_paired_devices">PAIRED DEVICES</string>
+    <string name="section_audio_output">AUDIO OUTPUT</string>
+    <string name="section_volume">VOLUME</string>
+    <string name="section_color_temperature">COLOR TEMPERATURE</string>
+    <string name="section_schedule">SCHEDULE</string>
+    <string name="section_energy_today">ENERGY TODAY</string>
+    <string name="section_auto_off_timer">AUTO-OFF TIMER</string>
+    <string name="section_outlets">OUTLETS</string>
+    <string name="section_hardware_status">HARDWARE STATUS</string>
+
+    <string name="bt_desk_soundbar">Desk Soundbar</string>
+    <string name="bt_desk_soundbar_sub">A2DP · AAC</string>
+    <string name="bt_headphones">WH-1000XM5</string>
+    <string name="bt_headphones_sub">Battery 64%</string>
+    <string name="bt_mouse">MX Master 3S</string>
+    <string name="bt_mouse_sub">Battery 90%</string>
+    <string name="output_soundbar">Soundbar</string>
+    <string name="output_headphones">Headphones</string>
+
+    <string name="pill_active">ACTIVE</string>
+    <string name="pill_paired">PAIRED</string>
+    <string name="pill_linked">LINKED</string>
+    <string name="pill_on">ON</string>
+    <string name="pill_blocked">BLOCKED</string>
+    <string name="pill_live">LIVE</string>
+
+    <string name="ct_warm">Warm</string>
+    <string name="ct_neutral">Neutral</string>
+    <string name="ct_cool">Cool</string>
+    <string name="schedule_turn_on">Turn on</string>
+    <string name="schedule_turn_off">Turn off</string>
+    <string name="days_weekdays">Weekdays</string>
+    <string name="days_every_day">Every day</string>
+    <string name="option_auto_dim">Auto-dim at sunset</string>
+
+    <string name="energy_value">1.84</string>
+    <string name="energy_unit">kWh · ≈ ₺4.10</string>
+    <string name="timer_off">Off</string>
+    <string name="timer_30m">30m</string>
+    <string name="timer_1h">1h</string>
+    <string name="timer_2h">2h</string>
+    <string name="outlet_monitors">Monitors</string>
+    <string name="outlet_monitors_sub">2 × 27\" · 62W</string>
+    <string name="outlet_dock">USB-C Dock</string>
+    <string name="outlet_dock_sub">Laptop charging · 53W</string>
+
+    <string name="hw_microphone">Microphone</string>
+    <string name="hw_microphone_sub">Desk USB mic</string>
+    <string name="hw_webcam">Webcam</string>
+    <string name="hw_webcam_sub">Shutter</string>
+    <string name="option_privacy_on_leave">Enable on \"Leave\" scene</string>
+    <string name="option_privacy_on_lock">Enable when screen locks</string>
+
+    <!-- Automation notifications (spec §9b) -->
+    <string name="notification_channel">Automations</string>
+    <string name="notif_plug_timer">Smart Plug turned off by timer</string>
+    <string name="notif_light_on">Desk Halo LED turned on by schedule</string>
+    <string name="notif_light_off">Desk Halo LED turned off by schedule</string>
+    <string name="notif_sunset">Desk Halo LED dimmed at sunset</string>
+    <string name="notif_privacy_lock">Privacy Guard enabled: screen locked</string>
+
+    <!-- Automation UI -->
+    <string name="option_use_schedule">Use schedule</string>
+    <string name="schedule_edit_on">Turn on at</string>
+    <string name="schedule_edit_off">Turn off at</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="privacy_lock_note">Acts at once while the app is open. A lock while it is in the background is applied when you return, unless Android has closed the app in the meantime.</string>
+
+    <!-- Exact alarms (spec §9c) -->
+    <string name="exact_timing_off">Exact timing is off: Android may run this late while the phone is idle.</string>
+    <string name="exact_timing_allow">Allow</string>
+
+    <!-- Login & roles (step 2) -->
+    <string name="login_subtitle">Choose a demo account</string>
+    <string name="login_footer">Demo accounts, no password. Roles decide what you can change.</string>
+    <string name="login_disabled">Account disabled</string>
+    <string name="role_admin_description">Administrator · full access</string>
+    <string name="role_operator_description">Operator · uses devices</string>
+    <string name="role_guest_description">Guest · view only</string>
+    <string name="role_admin">ADMIN</string>
+    <string name="role_operator">OPERATOR</string>
+    <string name="role_guest">GUEST</string>
+
+    <!-- App shell & More (step 2) -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_more">More</string>
+    <string name="view_only_banner">View only. Signed in as Guest.</string>
+    <string name="more_section_account">ACCOUNT</string>
+    <string name="more_section_app">APP</string>
+    <string name="more_users">Users</string>
+    <string name="more_switch_user">Switch user</string>
+    <string name="more_about">About</string>
+    <string name="about_title_upper">ABOUT</string>
+    <string name="about_version">Version %1$s · portfolio demo</string>
+    <string name="about_description">A smart desk and office IoT panel, rewritten natively in Kotlin with Jetpack Compose, Hilt, Room, DataStore and WorkManager. All devices and data are simulated.</string>
+    <string name="about_licenses_upper">THIRD-PARTY LICENSES</string>
+    <string name="about_licenses">Roboto · SIL Open Font License 1.1\nJetBrains Mono · SIL Open Font License 1.1\nBootstrap Icons · MIT License\nAndroidX, Kotlin, Dagger/Hilt · Apache License 2.0</string>
+
+    <!-- User manager (step 2) -->
+    <string name="users_title_upper">USERS</string>
+    <string name="user_add">Add user</string>
+    <string name="user_you">%1$s (you)</string>
+    <string name="user_last_login">Last sign-in: %1$s</string>
+    <string name="pill_disabled">DISABLED</string>
+    <string name="rel_never">never</string>
+    <string name="rel_now">just now</string>
+    <string name="rel_minutes">%1$d min ago</string>
+    <plurals name="rel_hours">
+        <item quantity="one">%d hour ago</item>
+        <item quantity="other">%d hours ago</item>
+    </plurals>
+    <string name="rel_yesterday">yesterday</string>
+    <string name="rel_days">%1$d days ago</string>
+    <string name="user_new_title_upper">NEW USER</string>
+    <string name="user_edit_title_upper">EDIT USER</string>
+    <string name="field_name_upper">NAME</string>
+    <string name="field_name">Name</string>
+    <string name="field_role_upper">ROLE</string>
+    <string name="role_admin_label">Admin</string>
+    <string name="role_operator_label">Operator</string>
+    <string name="role_guest_label">Guest</string>
+    <string name="option_active">Active</string>
+    <string name="action_delete_user">Delete user</string>
+    <string name="action_delete">Delete</string>
+    <string name="delete_confirm">Delete %1$s?</string>
+    <string name="rule_name_empty">Please enter a name.</string>
+    <string name="rule_name_too_long">The name can be at most 40 characters.</string>
+    <string name="rule_name_taken">A user with this name already exists.</string>
+    <string name="rule_self_delete">You cannot delete your own account.</string>
+    <string name="rule_self_deactivate">You cannot disable your own account.</string>
+    <string name="rule_self_demote">You cannot lower your own role.</string>
+    <string name="rule_last_admin">At least one active administrator must remain.</string>
+    <string name="rule_not_allowed">Only administrators can change users.</string>
+
+    <!-- Devices (step 3) -->
+    <string name="tab_devices">Devices</string>
+    <string name="devices_title_upper">DEVICES</string>
+    <string name="device_add">Add device</string>
+    <string name="filter_all">All %1$d</string>
+    <string name="filter_offline">Offline %1$d</string>
+    <string name="room_desk">Desk</string>
+    <string name="room_meeting">Meeting Room</string>
+    <string name="room_hallway">Hallway</string>
+    <string name="room_entrance">Entrance</string>
+    <string name="type_soundbar">Soundbar</string>
+    <string name="type_light">Light</string>
+    <string name="type_plug">Smart plug</string>
+    <string name="type_privacy">Privacy shutter</string>
+    <string name="type_camera">Camera</string>
+    <string name="type_sensor">Sensor</string>
+    <string name="status_online">ONLINE</string>
+    <string name="status_offline">OFFLINE</string>
+    <string name="status_restarting">RESTARTING</string>
+    <string name="summary_battery">Battery %1$d%%</string>
+    <string name="summary_firmware">Firmware %1$s</string>
+    <string name="summary_restarting">Restarting…</string>
+
+    <!-- Device detail (step 3) -->
+    <string name="device_last_seen">Last seen: %1$s</string>
+    <string name="device_info_upper">DEVICE INFO</string>
+    <string name="info_type">Type</string>
+    <string name="info_room">Room</string>
+    <string name="info_room_upper">ROOM</string>
+    <string name="info_firmware">Firmware</string>
+    <string name="info_ip">IP address</string>
+    <string name="info_mac">MAC address</string>
+    <string name="info_power">Power</string>
+    <string name="info_mains">Mains power</string>
+    <string name="info_signal">Signal</string>
+    <string name="info_dbm">%1$d dBm</string>
+    <string name="device_rename">Rename</string>
+    <string name="device_restart">Restart</string>
+    <string name="device_delete">Delete device</string>
+
+    <!-- Dashboard device offline / Add device (step 3) -->
+    <string name="status_offline_card">Offline. Not reachable right now</string>
+    <string name="add_device_title_upper">ADD DEVICE</string>
+    <string name="add_choose_type">What are you adding?</string>
+    <string name="add_searching">Searching nearby…</string>
+    <string name="add_found">Found a new device</string>
+    <string name="add_continue">Continue</string>
+    <string name="add_confirm">Add device</string>
+
+    <!-- Logs (step 4) -->
+    <string name="tab_logs">Logs</string>
+    <string name="logs_title_upper">LOGS</string>
+    <string name="logs_search">Search logs</string>
+    <string name="logs_not_allowed">Logs are available to administrators and operators.</string>
+    <string name="logs_client">Client</string>
+    <string name="logs_device">Device</string>
+    <string name="logs_client_upper">CLIENT</string>
+    <string name="logs_device_upper">DEVICE</string>
+    <string name="logs_info">Info</string>
+    <string name="logs_warn">Warn</string>
+    <string name="logs_error">Error</string>
+    <string name="logs_today">Today</string>
+    <string name="logs_yesterday">Yesterday</string>
+    <string name="logs_7days">7 days</string>
+    <string name="logs_custom">Custom</string>
+    <string name="logs_device_filter">Device: %1$s</string>
+    <string name="logs_export">Export CSV</string>
+    <string name="logs_empty">No entries match these filters</string>
+    <string name="logs_capped">Showing %1$s of %2$s · export for all</string>
+    <string name="log_entry_upper">LOG ENTRY</string>
+    <string name="log_not_found">This entry no longer exists (logs older than 30 days are removed).</string>
+    <string name="log_time">Time</string>
+    <string name="log_source">Source</string>
+    <string name="log_level">Level</string>
+    <string name="log_actor">By</string>
+    <string name="log_device">Device</string>
+    <string name="log_topic">Topic</string>
+    <string name="log_message_upper">MESSAGE</string>
+    <string name="log_payload_upper">PAYLOAD</string>
+    <string name="device_view_logs">View logs</string>
+
+    <!-- Cameras + Recordings (step 5) -->
+    <string name="tab_cameras">Cameras</string>
+    <string name="cameras_title_upper">CAMERAS</string>
+    <string name="camera_live">LIVE</string>
+    <string name="camera_live_dot">●</string>
+    <string name="speed_1x">1×</string>
+    <string name="speed_2x">2×</string>
+    <string name="recording_not_found">This recording no longer exists.</string>
+    <string name="camera_privacy_off">Privacy Guard – feed off</string>
+    <string name="camera_offline">Offline</string>
+    <string name="recordings">Recordings</string>
+    <string name="camera_snapshot">Snapshot</string>
+    <string name="camera_snapshot_saved">Snapshot saved</string>
+    <string name="recordings_title_upper">RECORDINGS</string>
+    <string name="recordings_all">All</string>
+    <string name="recordings_pick_day">Pick a day</string>
+    <string name="recordings_empty">No recordings for this day</string>
+    <string name="recordings_not_allowed">Recordings are available to administrators and operators.</string>
+    <string name="recording_info_upper">RECORDING</string>
+    <string name="info_camera">Camera</string>
+    <string name="info_started">Started</string>
+    <string name="info_duration">Duration</string>
+    <string name="info_event">Event</string>
+    <string name="player_position">%1$s / %2$s</string>
+    <string name="player_play">Play</string>
+    <string name="player_pause">Pause</string>
+    <string name="player_back10">Back 10 seconds</string>
+    <string name="player_fwd10">Forward 10 seconds</string>
+
+    <!-- Onboarding (step 6) -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="device_not_found">This device no longer exists.</string>
+    <string name="plug_turning_off">Turning off…</string>
+    <string name="switch_on">ON</string>
+    <string name="switch_off">OFF</string>
+    <string name="console_ping">PING: %1$dMS</string>
+    <string name="rule_user_gone">This user no longer exists.</string>
+    <string name="more_guide">User Guide</string>
+    <string name="guide_title_upper">USER GUIDE</string>
+    <string name="guide_search">Search the guide</string>
+    <string name="guide_show_tour">Show welcome tour</string>
+    <string name="guide_no_match">No topics match</string>
+    <string name="guide_topic_not_found">This topic is not in the guide.</string>
+    <string name="guide_steps_upper">STEPS</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get started</string>
+    <string name="onb_scenes_title">Scenes</string>
+    <string name="onb_scenes_body">Work, Meet and Leave set the whole desk with one tap: lamp, plug, soundbar and Privacy Guard switch together, and every command shows up in the MQTT console.</string>
+    <string name="onb_devices_title">Device control &amp; details</string>
+    <string name="onb_devices_body">Tap a card for its details: brightness, audio output, the plug\'s auto-off timer, the LED schedule and sunset dimming. Automations keep working even when the app is closed.</string>
+    <string name="onb_cameras_title">Cameras &amp; recordings</string>
+    <string name="onb_cameras_body">Watch four live cameras and take snapshots. With Privacy Guard on, the desk camera goes dark. Admins and operators can browse and replay recordings.</string>
+    <string name="onb_logs_title">Logs &amp; roles</string>
+    <string name="onb_logs_body">Every action and device event is logged, searchable and exportable as CSV. What you can do depends on your role: Admin, Operator or Guest.</string>
+
+    <!-- Home-screen widget -->
+    <string name="widget_title">SMART DESK</string>
+    <string name="widget_label">Desk controls</string>
+    <string name="widget_sign_in">Open the app to sign in</string>
+    <string name="widget_guest">View only (Guest)</string>
+    <string name="widget_offline">Offline</string>
+    <string name="widget_description">Scenes and the four desk switches</string>
+</resources>

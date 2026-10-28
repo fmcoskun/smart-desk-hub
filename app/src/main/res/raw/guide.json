@@ -1,0 +1,171 @@
+[
+  {
+    "id": "scenes",
+    "title": "Scenes",
+    "icon": "BriefcaseFill",
+    "summary": "Set the whole desk with one tap: Work, Meet or Leave.",
+    "paragraphs": [
+      "The three buttons at the top of the Dashboard switch several devices at once. Work turns the soundbar, Desk Halo LED and smart plug on, sets the LED to 85 % and turns Privacy Guard off. Meet does the same with the LED at 100 %.",
+      "Leave turns the soundbar, LED and plug off. It also turns Privacy Guard on (microphone and webcam shutter) when Enable on \"Leave\" scene is on in the Privacy Guard details.",
+      "A device that is offline cannot be reached, so a scene skips it and it keeps its state. Every command a scene sends appears in the MQTT Bridge Console and in the Logs."
+    ],
+    "steps": [
+      "Open the Dashboard.",
+      "Tap Work, Meet or Leave.",
+      "Watch the switches change and the console show the published messages."
+    ],
+    "keywords": ["work", "meet", "leave", "preset", "mqtt"]
+  },
+  {
+    "id": "dashboard",
+    "title": "Dashboard and device details",
+    "icon": "Grid1x2Fill",
+    "summary": "Switch devices, dim the LED and open each card's details.",
+    "paragraphs": [
+      "Each card has an ON/OFF switch. The Desk Halo LED also has a brightness slider. The footer shows the room temperature, humidity and the desk's power use.",
+      "Tap a card (not its switch) to open its details: Bluetooth shows paired devices and the audio output, the LED has colour temperature and its schedule, the smart plug shows its outlets and auto-off timer, and Privacy Guard shows the microphone and webcam state.",
+      "Guests see the same Dashboard, but its controls are disabled."
+    ],
+    "steps": [
+      "Tap a switch to turn a device on or off.",
+      "Tap the card itself to open its details.",
+      "Use Back (or the system Back gesture) to return."
+    ],
+    "keywords": ["switch", "brightness", "dimmer", "bluetooth", "lamp", "plug", "privacy", "footer"]
+  },
+  {
+    "id": "automations",
+    "title": "Automations",
+    "icon": "Clock",
+    "summary": "Plug timer, LED schedule, sunset dimming and the screen-lock rule.",
+    "paragraphs": [
+      "Smart Plug auto-off timer (30 min, 1 h, 2 h): the card counts down and the plug turns off when time is up. Turning the plug off by hand cancels the timer.",
+      "LED schedule: choose when the Desk Halo LED turns on and off, on weekdays or every day. Auto-dim at sunset: when the LED is on at Istanbul's sunset, it dims to 30 %. These automations also run when the app is closed, and show a notification when they act.",
+      "For on-time automations Android needs the \"Alarms & reminders\" permission; the LED and plug details show an Allow link while it is missing. Without it the app still runs them, but Android may delay them while the phone is idle.",
+      "Privacy Guard \"Enable when screen locks\" has a limit: Android only tells a running app about the screen lock. The rule therefore works while the app is running. While the app sits in the background, Android holds the lock event back and the rule applies when you return; if Android has closed the app in the meantime, that lock is missed."
+    ],
+    "steps": [
+      "Open the Smart Plug or Desk Halo LED details from the Dashboard.",
+      "Choose a timer, or switch on the schedule and edit its times and days.",
+      "If asked, allow notifications and \"Alarms & reminders\"."
+    ],
+    "keywords": ["timer", "schedule", "sunset", "dim", "alarm", "exact", "notification", "screen lock", "workmanager"]
+  },
+  {
+    "id": "cameras",
+    "title": "Live cameras",
+    "icon": "CameraVideoFill",
+    "summary": "Four live feeds, Privacy Guard blackout and snapshots.",
+    "paragraphs": [
+      "The Cameras tab shows the Desk, Door, Meeting Room and Hallway cameras with a LIVE badge and the current time. Every role can watch them.",
+      "The Desk camera is the webcam behind Privacy Guard: while Privacy Guard is on, its picture goes dark. A camera that is restarting or offline shows \"Offline\".",
+      "Tap a camera for a larger view. Snapshot records \"took a snapshot\" in the Logs under that camera; it works only while the picture is live."
+    ],
+    "steps": [
+      "Open the Cameras tab.",
+      "Tap a camera.",
+      "Tap Snapshot, or Recordings to see that camera's clips."
+    ],
+    "keywords": ["live", "feed", "snapshot", "webcam", "offline"]
+  },
+  {
+    "id": "recordings",
+    "title": "Recordings",
+    "icon": "Film",
+    "summary": "Find a clip by day and camera, then replay it.",
+    "paragraphs": [
+      "Recordings lists the clips of one day, newest first, each tagged PERSON or MOTION with its camera, start time and length. Choose Today, Yesterday or pick a day, and filter by camera.",
+      "The player has play/pause, a progress bar you can drag, 10-second jumps back and forward, and 1× or 2× speed. Rotating the phone keeps your place.",
+      "Recordings are available to Admins and Operators."
+    ],
+    "steps": [
+      "Open the Cameras tab and tap Recordings (or Recordings on a camera page).",
+      "Choose a day and a camera.",
+      "Tap a recording to play it."
+    ],
+    "keywords": ["clip", "playback", "player", "person", "motion", "replay", "speed"]
+  },
+  {
+    "id": "devices",
+    "title": "Device manager",
+    "icon": "Cpu",
+    "summary": "See every device, rename it, move it, restart it, add or delete devices.",
+    "paragraphs": [
+      "The Devices tab lists the dashboard devices, the four cameras and the room sensors with their status. Filter by room or show only offline devices.",
+      "A device page shows its type, room, firmware, IP and MAC address, battery or mains power, and signal. Admins and Operators can rename a device, change its room and restart it (it goes offline for about five seconds). A renamed dashboard device keeps its new name on the Dashboard too.",
+      "Only Admins can add and delete devices. Built-in devices (the dashboard devices, cameras and sensors) cannot be deleted."
+    ],
+    "steps": [
+      "Open the Devices tab and tap a device.",
+      "Use Rename, the room chips or Restart.",
+      "As an Admin, tap Add device, choose the type, wait for it to be found, then name it."
+    ],
+    "keywords": ["rename", "room", "restart", "add", "delete", "firmware", "battery", "offline", "pair"]
+  },
+  {
+    "id": "logs",
+    "title": "Logs",
+    "icon": "JournalText",
+    "summary": "Search every action and device event, filter it and export it.",
+    "paragraphs": [
+      "CLIENT entries are what people (or the scheduler) did; DEVICE entries are what devices reported: acknowledgements, warnings and errors. New entries appear live.",
+      "Search text matches the message, who did it, the device and the MQTT topic. Filter by source, by level (Info, Warn, Error) and by day: Today, Yesterday, 7 days or a custom range. View logs on a device page opens this list already filtered to that device.",
+      "Export CSV shares every matching entry (not only the 500 on screen) as a spreadsheet file through the Android share menu. Logs older than 30 days are removed."
+    ],
+    "steps": [
+      "Open the Logs tab.",
+      "Type in the search box and pick filters.",
+      "Tap an entry for its details, or Export CSV to share the list."
+    ],
+    "keywords": ["csv", "export", "spreadsheet", "search", "filter", "client", "device", "error", "warn"]
+  },
+  {
+    "id": "roles",
+    "title": "Roles",
+    "icon": "PersonBadge",
+    "summary": "What Admin, Operator and Guest can do.",
+    "paragraphs": [
+      "Admin can do everything: control devices, watch cameras and recordings, edit, add and delete devices, read the logs and manage users.",
+      "Operator can do the same except adding or deleting devices and managing users.",
+      "Guest can look at the Dashboard, watch the live cameras and see the device list. Guests cannot switch anything, cannot open recordings and have no Logs tab."
+    ],
+    "steps": [
+      "Check your role under More, next to your name.",
+      "Ask an Admin to change it in More › Users."
+    ],
+    "keywords": ["admin", "operator", "guest", "permission", "access"]
+  },
+  {
+    "id": "accounts",
+    "title": "Accounts and users",
+    "icon": "PeopleFill",
+    "summary": "Sign in with a demo account, switch user, manage users.",
+    "paragraphs": [
+      "There are no passwords in this demo: choose an account on the sign-in screen. Disabled accounts are grey and cannot be chosen. Signing in and out is written to the Logs.",
+      "More › Switch user returns to the sign-in screen. Admins find More › Users, where they can add people, change their role and disable or delete them.",
+      "Two rules keep the app usable: you cannot delete, disable or demote yourself, and there must always be at least one active Admin."
+    ],
+    "steps": [
+      "Open More and tap Switch user.",
+      "Choose another account.",
+      "As an Admin, open More › Users to edit accounts."
+    ],
+    "keywords": ["sign in", "login", "switch", "user", "disable", "password"]
+  },
+  {
+    "id": "about-demo",
+    "title": "About this demo",
+    "icon": "InfoCircle",
+    "summary": "What is simulated, and what a real installation would change.",
+    "paragraphs": [
+      "Everything runs on the phone: the devices, their acknowledgements, the sensor readings, the camera feeds and the sample history are simulated, so the app works without any network.",
+      "Messages are built exactly as they would be sent to an MQTT broker and are shown in the console and the Logs. A real installation would plug an MQTT client in behind the same interface and receive real device events instead of simulated ones.",
+      "This tour can be shown again from the top of the User Guide with Show welcome tour."
+    ],
+    "steps": [
+      "Read the README's Architecture section for the code-level picture.",
+      "Tap Show welcome tour to see the introduction again."
+    ],
+    "keywords": ["simulation", "mqtt", "broker", "demo", "network", "readme"]
+  }
+]

@@ -1,0 +1,267 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "6e7301324a6e6b51af4fc1b0c0c7f14e",
+    "entities": [
+      {
+        "tableName": "devices",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `subtitle` TEXT NOT NULL, `type` TEXT NOT NULL, `room` TEXT NOT NULL, `isOn` INTEGER NOT NULL, `online` INTEGER NOT NULL, `sortOrder` INTEGER NOT NULL, `firmware` TEXT NOT NULL DEFAULT '', `ipAddress` TEXT NOT NULL DEFAULT '', `macAddress` TEXT NOT NULL DEFAULT '', `batteryPct` INTEGER, `signalDbm` INTEGER NOT NULL DEFAULT -50, `lastSeenMillis` INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subtitle",
+            "columnName": "subtitle",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "room",
+            "columnName": "room",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isOn",
+            "columnName": "isOn",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "online",
+            "columnName": "online",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firmware",
+            "columnName": "firmware",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "ipAddress",
+            "columnName": "ipAddress",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "macAddress",
+            "columnName": "macAddress",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "batteryPct",
+            "columnName": "batteryPct",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "signalDbm",
+            "columnName": "signalDbm",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "-50"
+          },
+          {
+            "fieldPath": "lastSeenMillis",
+            "columnName": "lastSeenMillis",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "desk_settings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `brightness` INTEGER NOT NULL, `colorTempK` INTEGER NOT NULL, `autoDim` INTEGER NOT NULL, `scheduleOn` INTEGER NOT NULL, `scheduleOnDays` TEXT NOT NULL, `scheduleOff` INTEGER NOT NULL, `scheduleOffDays` TEXT NOT NULL, `scheduleEnabled` INTEGER NOT NULL, `audioOutput` TEXT NOT NULL, `volume` INTEGER NOT NULL, `plugTimer` TEXT NOT NULL, `plugTimerEndsAtMillis` INTEGER, `privacyOnLeave` INTEGER NOT NULL, `privacyOnLock` INTEGER NOT NULL, `activeScene` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brightness",
+            "columnName": "brightness",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorTempK",
+            "columnName": "colorTempK",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "autoDim",
+            "columnName": "autoDim",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleOn",
+            "columnName": "scheduleOn",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleOnDays",
+            "columnName": "scheduleOnDays",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleOff",
+            "columnName": "scheduleOff",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleOffDays",
+            "columnName": "scheduleOffDays",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleEnabled",
+            "columnName": "scheduleEnabled",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "audioOutput",
+            "columnName": "audioOutput",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "volume",
+            "columnName": "volume",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plugTimer",
+            "columnName": "plugTimer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "plugTimerEndsAtMillis",
+            "columnName": "plugTimerEndsAtMillis",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "privacyOnLeave",
+            "columnName": "privacyOnLeave",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "privacyOnLock",
+            "columnName": "privacyOnLock",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeScene",
+            "columnName": "activeScene",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `role` TEXT NOT NULL, `active` INTEGER NOT NULL, `lastLoginAtMillis` INTEGER, `sortOrder` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "role",
+            "columnName": "role",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastLoginAtMillis",
+            "columnName": "lastLoginAtMillis",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6e7301324a6e6b51af4fc1b0c0c7f14e')"
+    ]
+  }
+}
