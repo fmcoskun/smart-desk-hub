@@ -7,3 +7,8 @@ local.properties
 captures/
 .superpowers/
 kotlin-android-prompt.md
+
+# Local working notes and old screenshots (kept on disk, not published)
+docs/superpowers/
+docs/screenshots/native/
+docs/screenshots/0*.png

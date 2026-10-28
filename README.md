@@ -11,6 +11,8 @@ Everything runs on the phone with simulated devices, so it works without any net
 code is written to be read: every file starts with what it is and which layer it belongs to,
 and Android concepts are explained where they are first used.
 
+Türkçe tanıtım: [docs/Smart-Desk-Hub-TR.pdf](docs/Smart-Desk-Hub-TR.pdf)
+
 | | | | | |
 |---|---|---|---|---|
 | ![Login](docs/screenshots/readme/01-login.png) | ![Welcome tour](docs/screenshots/readme/02-onboarding.png) | ![Dashboard](docs/screenshots/readme/03-dashboard.png) | ![Lamp details](docs/screenshots/readme/04-light-detail.png) | ![Cameras](docs/screenshots/readme/05-cameras.png) |
